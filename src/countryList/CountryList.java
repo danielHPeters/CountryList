@@ -1,8 +1,9 @@
 /*
- * Read csv file with hashmap of airports
- * Gets the Airport that the user specifies with ariportcode.
+ * Read csv file with hashmap of countries
+ * Gets the country that the user specifies with countrycode.
  */
-package airportList;
+package countryList;
+
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -15,7 +16,7 @@ import java.util.Scanner;
  * @author Daniel
  * @version 1.0
  */
-public class AirportList {
+public class CountryList {
 
     /*------------*/
     /* Attributes */
@@ -78,26 +79,22 @@ public class AirportList {
     /**
      * 
      */
-    public void getAirport() {
+    public void searchCountry() {
         HashMap<String, String> data;
         String input;
         String airport;
         Scanner scanner = new Scanner(System.in);
 
-        String file = "airports.csv";
+        String file = "countries_simplified.csv";
         readFile(file);
         data = getMap();
-        cOut("Bitte gib einen Flughafencode ein (in Grossbuchstaben)");
-        input = scanner.findInLine(".{3}");
+        cOut("Bitte gib einen Ländercode ein");
+        input = scanner.next().toUpperCase();
         airport = data.get(input);
         if (airport != null) {
-            cOut("Flughafencode: " + input + "\nFlughafenname: " + airport);
+            cOut("Ländercode: " + input + "\nLändername: " + airport);
         } else {
-            cOut(
-                    "Der Angegebene Flughafen mit dem Code '"
-                    + input
-                    + "' konnte nicht Gefunden werden."
-            );
+            cOut("Es gibt kein land mit dem code: " + input + " !");
         }
 
     }
@@ -106,8 +103,8 @@ public class AirportList {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        AirportList pb = new AirportList();
-        pb.getAirport();
+        CountryList pb = new CountryList();
+        pb.searchCountry();
     }
 
 }
