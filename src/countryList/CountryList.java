@@ -45,7 +45,7 @@ public class CountryList {
      * country name if it exists
      */
     public void searchCountry() {
-        HashMap<String, String> data;
+
         String input;
         String country;
 
