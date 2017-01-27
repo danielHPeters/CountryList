@@ -28,39 +28,18 @@ public class CountryList {
      * HashMap containing three character country codes as key and the name of
      * the country as value
      */
-    private HashMap<String, String> map;
+    private HashMap<String, String> countryData;
+    
+    private SearchExecutor search;
 
     /**
      * Default constructor. Initializes the dataloader object.
      */
     public CountryList() {
         this.loader = new FileLoader("countries_simplified.csv");
-        this.map = new HashMap<>();
+        this.countryData = loader.load();
         this.scanner = new Scanner(System.in);
-
-    }
-
-    /**
-     * Asks the user to input a three character country code and displays the
-     * country name if it exists
-     */
-    public void searchCountry() {
-
-        String input;
-        String country;
-
-        this.map = loader.load();
-
-        System.out.println("Bitte gib einen Ländercode ein");
-
-        input = this.scanner.next().toUpperCase();
-        country = this.map.get(input);
-
-        if (country != null) {
-            System.out.println("Ländercode: " + input + "\nLändername: " + country);
-        } else {
-            System.out.println("Es gibt kein land mit dem code: " + input + " !");
-        }
+        this.search = new SearchExecutor(scanner, countryData);
 
     }
 
@@ -71,7 +50,7 @@ public class CountryList {
      */
     public static void main(String[] args) {
         CountryList pb = new CountryList();
-        pb.searchCountry();
+        pb.search.searchCountry();
     }
 
 }
