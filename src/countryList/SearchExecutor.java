@@ -15,7 +15,7 @@ public class SearchExecutor {
     private final Scanner scanner;
     
     /**
-     * 
+     * This map contains the country code as key and the country name as value
      */
     private final HashMap<String, String> countryData;
     
