@@ -10,13 +10,13 @@ import java.util.HashMap;
 public interface DataLoader {
 
     /**
-     *
+     * Loads the data into a HashMap
      * @return
      */
     public HashMap<String, String> load();
 
     /**
-     *
+     * Set the source of the data
      * @param source
      */
     public void setSource(String source);

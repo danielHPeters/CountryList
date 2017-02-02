@@ -58,7 +58,7 @@ public class FileLoader implements DataLoader {
 
             }
         } catch (IOException e) {
-            System.out.println("Fehler beim Einlesen der Datei.");
+            System.out.println("Failed to open the data file.");
         }
 
         return map;

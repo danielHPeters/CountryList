@@ -30,6 +30,9 @@ public class CountryList {
      */
     private HashMap<String, String> countryData;
     
+    /**
+     * Search functionality
+     */
     private SearchExecutor search;
 
     /**
