@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class SearchExecutor {
     
     /**
-     * 
+     * Cecks for User input in the Console
      */
     private final Scanner scanner;
     

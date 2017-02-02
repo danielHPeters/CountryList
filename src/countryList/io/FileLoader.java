@@ -52,8 +52,10 @@ public class FileLoader implements DataLoader {
             String[] result;
 
             while ((line = br.readLine()) != null) {
+
                 result = line.split(delimiter);
                 map.put(result[0], result[1]);
+
             }
         } catch (IOException e) {
             System.out.println("Fehler beim Einlesen der Datei.");
