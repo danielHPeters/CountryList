@@ -5,17 +5,24 @@ import ch.peters.daniel.countrylist.factory.CountryFactory;
 import ch.peters.daniel.countrylist.io.FileHandler;
 import ch.peters.daniel.countrylist.model.Country;
 import ch.peters.daniel.countrylist.search.Search;
+
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXTextField;
+
 import javafx.collections.FXCollections;
-import javafx.collections.ListChangeListener;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Controller of main Screen.
+ *
+ * @author Daniel Peters
+ * @version 1.0
+ */
 public class MainController implements Initializable {
   @FXML
   private JFXTextField search;
@@ -27,7 +34,7 @@ public class MainController implements Initializable {
   @Override
   public void initialize(URL location, ResourceBundle resources) {
     var countryFactory = new CountryFactory();
-    var countryLoader = new FileHandler<>("/data/countries_simplified.csv", countryFactory);
+    var countryLoader = new FileHandler<>("/data/countries.csv", countryFactory);
     var observableList = FXCollections.observableArrayList(countryLoader.getAll());
 
     entitiesList.setItems(observableList);
@@ -35,6 +42,7 @@ public class MainController implements Initializable {
 
     btnStartSearch.setOnAction(event -> {
       var term = search.getText();
+
       entitiesList.setItems(Search.search(observableList, term));
     });
   }

@@ -2,12 +2,10 @@ package ch.peters.daniel.countrylist.search;
 
 import javafx.collections.ObservableList;
 
-import java.util.List;
-
 /**
  * Searches the csv files.
  *
- * @author Daniel Peters <daniel.peters.ch@gmail.com>
+ * @author Daniel Peters
  * @version 1.0
  */
 public class Search {

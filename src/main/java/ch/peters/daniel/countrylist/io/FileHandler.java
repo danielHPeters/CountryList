@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 /**
  * DataHandler that loads the data from a file source
  *
- * @author Daniel Peters <daniel.peters.ch@gmail.com>
+ * @author Daniel Peters
  * @version 1.0
  */
 public class FileHandler<T> implements DataHandler<T> {

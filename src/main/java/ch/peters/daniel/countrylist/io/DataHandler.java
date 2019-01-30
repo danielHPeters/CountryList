@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Interface to be implemented by object that getAll data from different sources
  *
- * @author Daniel Peters <daniel.peters.ch@gmail.com>
+ * @author Daniel Peters
  * @version 1.0
  */
 public interface DataHandler<T> {

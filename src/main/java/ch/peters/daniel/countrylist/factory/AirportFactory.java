@@ -5,7 +5,7 @@ import ch.peters.daniel.countrylist.model.Airport;
 /**
  * Airport factory.
  *
- * @author Daniel Peters <daniel.peters.ch@gmail.com>
+ * @author Daniel Peters
  * @version 1.0
  */
 public class AirportFactory implements Factory<Airport> {

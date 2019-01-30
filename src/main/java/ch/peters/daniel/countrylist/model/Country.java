@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Country model class.
  *
- * @author Daniel Peters <daniel.peters.ch@gmail.com>
+ * @author Daniel Peters
  * @version 1.0
  */
 public class Country implements Serializable {

@@ -9,6 +9,12 @@ import javafx.scene.control.ListCell;
 
 import java.io.IOException;
 
+/**
+ * Country cell item.
+ *
+ * @author Daniel Peters
+ * @version 1.0
+ */
 public class CountryCell extends ListCell<Country> {
   @FXML
   private Label labelIsoCode;

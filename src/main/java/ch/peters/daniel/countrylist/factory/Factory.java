@@ -4,7 +4,7 @@ package ch.peters.daniel.countrylist.factory;
  * Factory interface.
  *
  * @param <T> Model class
- * @author Daniel Peters <daniel.peters.ch@gmail.com>
+ * @author Daniel Peters
  * @version 1.0
  */
 public interface Factory<T> {

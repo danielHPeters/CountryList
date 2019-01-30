@@ -15,13 +15,13 @@ import javafx.stage.Stage;
  * Read csv file with List of countries Gets the country that the user
  * specifies with country code.
  *
- * @author Daniel Peters <daniel.peters.ch@gmail.com>
+ * @author Daniel Peters
  * @version 2.0
  */
 public class App extends Application {
   public void test() {
     var countryFactory = new CountryFactory();
-    var countryLoader = new FileHandler<>("/data/countries_simplified.csv", countryFactory);
+    var countryLoader = new FileHandler<>("/data/countries.csv", countryFactory);
     var countryData = countryLoader.getAll();
     var airportFactory = new AirportFactory();
     var airportLoader = new FileHandler<>("/data/airports.csv", airportFactory);

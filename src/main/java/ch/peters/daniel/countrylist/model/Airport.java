@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Airport model class.
  *
- * @author Daniel Peters <daniel.peters.ch@gmail.com>
+ * @author Daniel Peter
  * @version 1.0
  */
 public class Airport implements Serializable {
