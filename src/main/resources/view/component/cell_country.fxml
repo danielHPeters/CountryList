@@ -2,11 +2,11 @@
 <?import javafx.scene.layout.HBox?>
 
 <fx:root type="javafx.scene.control.ListCell" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
-    <graphic>
-        <HBox>
-            <Label fx:id="labelIsoCode" minWidth="80"/>
-            <Label fx:id="labelName" minWidth="260"/>
-            <Label fx:id="labelCapital" minWidth="50"/>
-        </HBox>
-    </graphic>
+  <graphic>
+    <HBox>
+      <Label fx:id="labelIsoCode" minWidth="80"/>
+      <Label fx:id="labelName" minWidth="260"/>
+      <Label fx:id="labelCapital" minWidth="50"/>
+    </HBox>
+  </graphic>
 </fx:root>
